@@ -23,7 +23,7 @@ import { parseBooleanPreference, Preference } from "./database";
 import { desktopService } from "./daemon";
 import { userAgent } from "./userAgent";
 
-const RELEASES_URL = "https://api.github.com/repos/reF1nd/sing-box-releases/releases";
+const RELEASES_URL = "https://api.github.com/repos/MiChongs/sing-box/releases";
 const RELEASES_REQUEST_TIMEOUT_MILLISECONDS = 30_000;
 const EXIT_CODE_CANCELLED = 1223;
 const EXIT_CODE_LAUNCH_FAILED = 1224;
@@ -46,7 +46,7 @@ function parseComparableVersion(version: string): ComparableVersion | null {
   if (normalizedVersion === null) {
     return null;
   }
-  const forkSuffix = /^(.*)-reF1nd(?:\.(\d+))?$/.exec(normalizedVersion);
+  const forkSuffix = /^(.*)-xiaobaf14g(?:\.(\d+))?$/.exec(normalizedVersion);
   if (forkSuffix === null) {
     return { base: normalizedVersion, revision: 0 };
   }
